@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset default styling */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #E5D9B6, #A4BE7B);
+}
+
+.container {
+    margin-top: 100px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #285430;
+    background-image: url('assets/images/Desain\ tanpa\ judul.png');
+    background-size: cover;
+    /* background-position: center; */
+    width: 100%;
+}
+
+.titlePertama {
+    margin-top: 31px;
+    margin-left: 71px;
+    font-size: 30px;
+    font-family: Poppins;
+}
+
+.titlePertama1 {
+    margin-top: 11px;
+    margin-left: 141px;
+    font-family: Poppins;
+}
+
+.titlePertama2 {
+    margin-top: 31px;
+    /* margin-left: 71px; */
+    font-size: 30px;
+    font-family: Poppins;
+    color: white;
+    background-color: #5F8D4E;
+    height: 71px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Konten */
+.introPuasa,
+.introPuasa1,
+.introPuasa2 {
+    max-width: 900px;
+    width: 90%;
+    margin: 20px auto;
+    text-align: justify;
+    font-size: 19px;
+    font-family: 'Amiri', serif;
+}
+
+.introPuasa {
+    text-indent: 20px;
+}
+
+/* Parallax */
+.parallax {
+    background-image: url('assets/images/puasa.jpg');
+    height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+/* Container Wrapper */
+.wrap {
+    display: flex;
+    align-items: center; /* Agar gambar sejajar dengan teks */
+    gap: 20px; /* Jarak antara teks dan gambar */
+    max-width: 900px; /* Batas lebar supaya tidak terlalu lebar */
+    margin: 20px auto;
+}
+
+/* Styling gambar */
+.wrap img {
+    max-width: 200px; /* Ukuran gambar dibatasi */
+    height: auto;
+}
+
+/* Card */
+.cardBuka {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
+/* Media Query (Responsiveness) */
+@media screen and (max-width: 768px) {
+    .titlePertama, .titlePertama1, .titlePertama2 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .titlePertama2 {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .introPuasa,
+    .introPuasa1,
+    .introPuasa2 {
+        width: 95%;
+        font-size: 16px;
+    }
+
+    .wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .parallax {
+        height: 150px;
+        background-attachment: scroll;
+    }
+}

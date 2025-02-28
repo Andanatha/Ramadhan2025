@@ -1,0 +1,10 @@
+*, body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+}
+
+.jadwal {
+    display: flex;
+    flex-direction: row;
+}
