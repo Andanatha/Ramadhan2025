@@ -1,0 +1,12 @@
+*, body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+}
+
+@media screen and (max-width: 768px) {
+    .p {
+        text-align: justify;
+        font-size: 17px;
+    }
+}
