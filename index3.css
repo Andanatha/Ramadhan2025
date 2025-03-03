@@ -1,13 +1,12 @@
-@media (max-width: 768px) {
-    .wrap {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 10px;
-    }
+*, body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+}
 
-    .wrap img {
-        width: calc(50% - 5px); /* Supaya dua gambar per baris dengan sedikit jarak */
-        height: auto;
+@media screen and (max-width: 768px) {
+    .p {
+        text-align: justify;
+        font-size: 17px;
     }
 }
