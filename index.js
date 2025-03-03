@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 localStorage.setItem(username, password);
                 alert("Pendaftaran berhasil! Silakan login.");
-                window.location.href = "index_log.html";
+                window.location.href = "index.html";
             }
         });
     }
