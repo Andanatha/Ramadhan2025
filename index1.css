@@ -98,6 +98,7 @@ html, body {
     height: auto;
 }
 
+
 /* Card */
 .cardBuka {
     display: flex;
@@ -106,6 +107,93 @@ html, body {
     gap: 40px;
     width: 100%;
 }
+
+/* ====== DARK MODE TOGGLE ====== */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    top: 17px;
+    right: 30px;
+}
+
+.toggle-label {
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffeb99; /* Warna terang */
+    border-radius: 34px;
+    transition: .4s;
+}
+
+.slider::before {
+    content: "☀️"; /* Matahari */
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+input:checked + .slider {
+    background-color: #1e3a5f; /* Warna gelap */
+}
+
+input:checked + .slider::before {
+    transform: translateX(26px);
+    content: "🌙"; /* Bulan */
+}
+
+/* DARK MODE STYLING */
+body.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+body.dark-mode .toggle-label {
+    color: white;
+}
+
+body.dark-mode .titlePertama2 {
+    background-color: #3a5a40;
+    color: #f0f0f0;
+}
+
+body .dark-mode .card {
+    background-color: tomato;
+    color: #ffff;
+}
+
 
 /* Media Query (Responsiveness) */
 @media screen and (max-width: 768px) {
@@ -135,5 +223,9 @@ html, body {
     .parallax {
         height: 150px;
         background-attachment: scroll;
+    }
+
+    .toggle-container {
+        margin-right: 62px;
     }
 }
